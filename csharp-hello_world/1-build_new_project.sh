@@ -1,5 +1,11 @@
 #!/usr/bin/env bash
 
-dotnet new console -o 1-new_project
+mkdir -p 1-new_project
 
-dotnet build 1-new_project/1-new_project.csproj
+cd 1-new_project
+
+dotnet new console
+
+dotnet build
+
+cd ..
