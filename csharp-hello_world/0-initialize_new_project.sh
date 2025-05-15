@@ -1,19 +1,7 @@
-#!/bin/bash
-
-# Exit immediately if a command exits with a non-zero status
+#!/usr/bin/env bash
 set -e
-
-# Print commands and their arguments as they are executed
 set -x
-
-# Create the project directory
 mkdir -p 0-new_project
 cd 0-new_project
-
-# Initialize a new C# console application
 dotnet new console
-
-# Restore dependencies
 dotnet restore
-
-echo "C# project successfully initialized in 0-new_project folder!"
