@@ -17,7 +17,9 @@ class Program
 
         for (i = 0; i < letters.Length; i++)
         {
-            if(Character.IsLower(letters[i]))
+            bool isLowercase = letters[i] >= 'a' && letters[i] <= 'z';
+            
+            if(isLowercase)
                 Console.WriteLine("{0} is lowercase", letters[i]);
             else
                 Console.WriteLine("{0} is uppercase", letters[i]);
