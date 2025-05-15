@@ -7,10 +7,8 @@ class Number
         // Get the absolute value to handle negative numbers
         int lastDigit = Math.Abs(number % 10);
         
-        // Print the last digit
         Console.Write(lastDigit);
-        
-        // Return the value of the last digit
+    
         return lastDigit;
     }
 }

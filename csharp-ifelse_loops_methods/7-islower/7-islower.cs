@@ -4,8 +4,7 @@ class Character
 {
     public static bool IsLower(char c)
     {
-        // Lowercase letters in ASCII range from 97 ('a') to 122 ('z')
-        return c >= 'a' && c <= 'z';
+        return c >= 97 && c <= 122;
     }
 }
 
