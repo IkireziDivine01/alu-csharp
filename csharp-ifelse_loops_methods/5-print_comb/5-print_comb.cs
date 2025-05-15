@@ -5,32 +5,18 @@ class Program
     static void Main(string[] args)
     {
         string output = "";
-        char lastChar = '\0';
         
-        // Find the last valid character (not 'q' or 'e') in the range
-        for (char c = 'z'; c >= 'a'; c--)
+        for (int i = 0; i < 100; i++)
         {
-            if (c != 'q' && c != 'e')
-            {
-                lastChar = c;
-                break;
-            }
+            // Format each number with two digits
+            output += i.ToString("D2");
+            
+            // Add comma and space after each number, except the last one
+            if (i < 99)
+                output += ", ";
         }
         
-        // Build the output string with commas between letters
-        for (char c = 'a'; c <= 'z'; c++)
-        {
-            if (c != 'q' && c != 'e')
-            {
-                output += c;
-                // Add comma only if this is not the last character
-                if (c != lastChar)
-                {
-                    output += ",";
-                }
-            }
-        }
-        
-        Console.Write(output);
+        // Print all formatted numbers at once and add a new line
+        Console.WriteLine(output);
     }
 }
