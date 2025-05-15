@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
-dotnet new console -o 0-new_project
+mkdir -p 0-new_project
 
-dotnet build 0-new_project/0-new_project.csproj
+cd $(dirname "0-new_project")
+
+dotnet new console -o 0-new_project
