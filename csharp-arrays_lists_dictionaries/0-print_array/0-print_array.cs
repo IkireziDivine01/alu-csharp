@@ -1,6 +1,6 @@
 ﻿using System;
 
-class Program
+class ArrayDemo
 {
     static void Main(string[] args)
     {
