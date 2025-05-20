@@ -4,7 +4,7 @@ class Array
 {
     public static void Reverse(int[] array)
     {
-        if (array === null)
+        if (array == null)
         {
             throw new ArgumentNullException(nameof(array), "Array cannot be null");
         }
