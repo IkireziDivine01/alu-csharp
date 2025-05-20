@@ -1,6 +1,6 @@
 ﻿using System;
 
-#nullable enable // Enable nullable reference types
+#nullable enable
 
 class Array
 {
