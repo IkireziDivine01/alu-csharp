@@ -1,11 +1,15 @@
 ﻿using System;
 
+#nullable enable
+
 class Array
 {
     public static void Reverse(int[] array)
     {
+        // With nullable reference types enabled, not checking for null
+        // will generate the expected warning
         
-        if (array.Length == 0)  // This will throw NullReferenceException if array is null
+        if (array.Length == 0)
         {
             Console.WriteLine();
             return;
