@@ -16,7 +16,7 @@ namespace _14_rectangular_array
                 {
                     Console.Write(array[i, j]);
                     
-=                    if (j < 4)
+                    if (j < 4)
                         Console.Write(" ");
                 }
                 Console.WriteLine();
