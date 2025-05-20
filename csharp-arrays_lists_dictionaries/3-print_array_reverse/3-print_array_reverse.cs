@@ -20,11 +20,4 @@ class Array
         }
         Console.WriteLine();
     }
-    
-    // This method will call Reverse with a null parameter, triggering the warning
-    public static void Test()
-    {
-        int[]? nullArray = null;
-        Reverse(nullArray); // This will trigger the warning CS8604
-    }
 }
