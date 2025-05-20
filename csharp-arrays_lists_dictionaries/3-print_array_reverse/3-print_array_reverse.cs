@@ -1,13 +1,15 @@
 ﻿using System;
 
-#pragma warning disable
+// This attribute ensures parameters are non-null by default in this file
 #nullable enable
-#pragma warning restore
 
 class Array
 {
+    // The method expects a non-null array (by default in nullable context)
     public static void Reverse(int[] array)
     {
+        // Even though we check for null here, the compiler will still warn
+        // because the parameter is declared as non-nullable
         if (array == null || array.Length == 0)
         {
             Console.WriteLine();
