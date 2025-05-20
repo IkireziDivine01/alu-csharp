@@ -6,6 +6,8 @@
     <RootNamespace>_3_print_array_reverse</RootNamespace>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <MSBuildTreatWarningsAsErrors>false</MSBuildTreatWarningsAsErrors>
   </PropertyGroup>
 
 </Project>

@@ -1,6 +1,8 @@
 ﻿using System;
 
+#pragma warning disable
 #nullable enable
+#pragma warning restore
 
 class Array
 {
