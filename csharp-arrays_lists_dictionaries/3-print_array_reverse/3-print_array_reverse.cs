@@ -4,6 +4,7 @@ class Array
 {
     public static void Reverse(int[] array)
     {
+        // The null check is still here, but the compiler will warn about possible null reference
         if (array == null)
         {
             throw new ArgumentNullException(nameof(array), "Array cannot be null");
@@ -24,5 +25,15 @@ class Array
         }
         
         Console.WriteLine();
+    }
+}
+
+// Adding this to main_2.cs to produce the warning:
+class Program
+{
+    static void Main()
+    {
+        int[] array = null;
+        Array.Reverse(array); // This will trigger the warning CS8604
     }
 }
