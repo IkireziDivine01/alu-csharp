@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-public class List
+class List
 {
     public static List<int> CreatePrint(int size)
     {
@@ -11,14 +11,23 @@ public class List
             return null;
         }
 
-        List<int> newList = new List<int>();
-        
+        List<int> result = new List<int>();
+
         for (int i = 0; i < size; i++)
         {
-            newList.Add(i);
-            Console.WriteLine(i);
+            result.Add(i);
+        }
+
+        for (int i = 0; i < result.Count; i++)
+        {
+            Console.Write(result[i]);
+            
+            if (i < result.Count - 1)
+                Console.Write(" ");
         }
         
-        return newList;
+        Console.WriteLine();
+
+        return result;
     }
 }
