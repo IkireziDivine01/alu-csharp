@@ -1,15 +1,17 @@
 ﻿using System;
 
-// This attribute ensures parameters are non-null by default in this file
+// Ensure nullable reference types are enabled
 #nullable enable
 
 class Array
 {
-    // The method expects a non-null array (by default in nullable context)
-    public static void Reverse(int[] array)
+    // Explicitly mark parameter as non-nullable to trigger warning
+    public static void Reverse(
+#pragma warning disable CS8625 // Cannot convert null literal to non-nullable reference type.
+        [System.Diagnostics.CodeAnalysis.DisallowNull] int[] array = null
+#pragma warning restore CS8625
+    )
     {
-        // Even though we check for null here, the compiler will still warn
-        // because the parameter is declared as non-nullable
         if (array == null || array.Length == 0)
         {
             Console.WriteLine();
