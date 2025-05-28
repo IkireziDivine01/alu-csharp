@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\LENOVO\\Documents\\alu-csharp\\csharp-arrays_lists_dictionaries\\2-replace_element\\2-replace_element.csproj",
-      "projectName": "2-replace_element",
-      "projectPath": "C:\\Users\\LENOVO\\Documents\\alu-csharp\\csharp-arrays_lists_dictionaries\\2-replace_element\\2-replace_element.csproj",
+      "projectUniqueName": "C:\\Users\\LENOVO\\Documents\\alu-csharp\\csharp-hashset_stack_queue_linkedlist\\0-unique_add\\0-unique_add.csproj",
+      "projectName": "0-unique_add",
+      "projectPath": "C:\\Users\\LENOVO\\Documents\\alu-csharp\\csharp-hashset_stack_queue_linkedlist\\0-unique_add\\0-unique_add.csproj",
       "packagesPath": "C:\\Users\\LENOVO\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\LENOVO\\Documents\\alu-csharp\\csharp-arrays_lists_dictionaries\\2-replace_element\\obj\\",
+      "outputPath": "C:\\Users\\LENOVO\\Documents\\alu-csharp\\csharp-hashset_stack_queue_linkedlist\\0-unique_add\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\LENOVO\\AppData\\Roaming\\NuGet\\NuGet.Config"
