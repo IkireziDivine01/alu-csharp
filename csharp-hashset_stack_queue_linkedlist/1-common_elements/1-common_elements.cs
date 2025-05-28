@@ -4,7 +4,7 @@
         if (list1 == null || list2 == null)
             return new List<int>();
 
-        List<int> commonElements -new List<int>();
+        List<int> commonElements = new List<int>();
         HashSet<int> set2 = new HashSet<int>(list2);
         HashSet<int> addedElements = new HashSet<int>();
 
