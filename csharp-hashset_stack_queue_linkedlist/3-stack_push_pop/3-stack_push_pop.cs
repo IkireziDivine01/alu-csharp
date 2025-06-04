@@ -4,7 +4,7 @@ using System.Collections.Generic;
 public static class MyStack
 {
     public static Stack<string> Info(Stack<string> aStack, string newItem, string search)
-    {   
+    {
         string item = "";
 
         Console.WriteLine("Number of items: {0}", aStack.Count);
@@ -23,5 +23,7 @@ public static class MyStack
             aStack.Pop();
         }
         aStack.Push(newItem);
+
+        return aStack;
     }
 }
