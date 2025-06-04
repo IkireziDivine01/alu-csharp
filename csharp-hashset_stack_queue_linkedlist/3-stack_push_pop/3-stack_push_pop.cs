@@ -30,36 +30,31 @@ public static class MyStack
         
         if (containsSearch)
         {
-            Stack<string> tempStack = new Stack<string>();
+            string[] allItems = new string[aStack.Count];
+            aStack.CopyTo(allItems, 0);
             
-            while (aStack.Count > 0 && aStack.Peek() != search)
+            int searchIndex = -1;
+            for (int i = 0; i < allItems.Length; i++)
             {
-                tempStack.Push(aStack.Peek());
-                string[] temp = new string[aStack.Count];
-                aStack.CopyTo(temp, 0);
-                aStack.Clear();
-                for (int i = 1; i < temp.Length; i++)
+                if (allItems[i] == search)
                 {
-                    aStack.Push(temp[i]);
+                    searchIndex = i;
+                    break;
                 }
             }
             
-            if (aStack.Count > 0)
-            {
-                aStack.Pop();
-            }
+            aStack.Clear();
             
-            while (tempStack.Count > 0)
+            for (int i = allItems.Length - 1; i > searchIndex; i--)
             {
-                string[] temp = new string[tempStack.Count];
-                tempStack.CopyTo(temp, 0);
-                tempStack.Clear();
-                for (int i = 1; i < temp.Length; i++)
-                {
-                    tempStack.Push(temp[i]);
-                }
-                aStack.Push(temp[0]);
+                aStack.Push(allItems[i]);
             }
+        }
+        
+        string topItem = aStack.Count > 0 ? aStack.Pop() : null;
+        if (topItem != null)
+        {
+            aStack.Push(topItem);
         }
         
         aStack.Push(newItem);
