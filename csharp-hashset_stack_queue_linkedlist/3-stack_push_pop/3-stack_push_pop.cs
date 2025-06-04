@@ -30,28 +30,30 @@ public static class MyStack
         
         if (containsSearch)
         {
-            Stack<string> tempStack = new Stack<string>();
+            List<string> itemsToKeep = new List<string>();
             
-            while (aStack.Count > 0)
+            string[] stackArray = new string[aStack.Count];
+            aStack.CopyTo(stackArray, 0);
+            
+            bool foundSearch = false;
+            for (int i = 0; i < stackArray.Length; i++)
             {
-                string currentItem = aStack.Pop(); 
-                if (currentItem == search)
+                if (stackArray[i] == search)
                 {
-                    break;
+                    foundSearch = true;
+                    continue;
+                }
+                if (foundSearch)
+                {
+                    itemsToKeep.Add(stackArray[i]);
                 }
             }
             
             aStack.Clear();
             
-            Stack<string> reverseTemp = new Stack<string>();
-            while (tempStack.Count > 0)
+            for (int i = itemsToKeep.Count - 1; i >= 0; i--)
             {
-                reverseTemp.Push(tempStack.Pop());
-            }
-            
-            while (reverseTemp.Count > 0)
-            {
-                aStack.Push(reverseTemp.Pop());
+                aStack.Push(itemsToKeep[i]);
             }
         }
         
