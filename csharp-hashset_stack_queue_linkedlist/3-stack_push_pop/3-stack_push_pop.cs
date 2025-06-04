@@ -41,6 +41,11 @@ public static class MyStack
             {
                 aStack.Push(items[i]);
             }
+            
+            if (aStack.Count > 0)
+            {
+                aStack.Pop();
+            }
         }
         
         aStack.Push(newItem);
