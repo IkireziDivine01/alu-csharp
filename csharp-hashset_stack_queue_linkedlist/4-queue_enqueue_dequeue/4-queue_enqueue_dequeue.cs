@@ -23,29 +23,14 @@ class MyQueue
         
         if (containsSearch)
         {
-            Queue<string> tempQueue = new Queue<string>();
-            bool foundSearch = false;
+            List<string> allItems = new List<string>(aQueue);
+            aQueue.Clear();
             
-            while (aQueue.Count > 0)
-            {
-                string currentItem = aQueue.Dequeue();
-                
-                if (!foundSearch)
-                {
-                    if (currentItem == search)
-                    {
-                        foundSearch = true;
-                    }
-                }
-                else
-                {
-                    tempQueue.Enqueue(currentItem);
-                }
-            }
+            int searchIndex = allItems.IndexOf(search);
             
-            while (tempQueue.Count > 0)
+            for (int i = searchIndex + 1; i < allItems.Count; i++)
             {
-                aQueue.Enqueue(tempQueue.Dequeue());
+                aQueue.Enqueue(allItems[i]);
             }
         }
         
