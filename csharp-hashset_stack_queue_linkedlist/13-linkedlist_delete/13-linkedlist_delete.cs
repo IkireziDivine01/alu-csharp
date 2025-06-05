@@ -1,30 +1,23 @@
 ﻿using System;
 using System.Collections.Generic;
 
-class LList
+public class LList
 {
-    public static LinkedListNode<int> Insert(LinkedList<int> myLList, int n)
+    public static void Delete(LinkedList<int> myLList, int index)
     {
-        if (myLList.Count == 0 || n <= myLList.First.Value)
-        {
-            return myLList.AddFirst(n);
-        }
-        
-        if (n >= myLList.Last.Value)
-        {
-            return myLList.AddLast(n);
-        }
-        
+        if (index < 0 || index >= myLList.Count)
+            return;
+
         LinkedListNode<int> current = myLList.First;
-        while (current.Next != null)
+        int i = 0;
+
+        while (current != null && i < index)
         {
-            if (n <= current.Next.Value)
-            {
-                return myLList.AddBefore(current.Next, n);
-            }
             current = current.Next;
+            i++;
         }
-        
-        return myLList.AddLast(n);
+
+        if (current != null)
+            myLList.Remove(current);
     }
 }
