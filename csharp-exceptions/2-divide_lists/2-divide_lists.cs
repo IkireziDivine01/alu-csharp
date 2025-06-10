@@ -17,10 +17,12 @@ public static class List
             catch (DivideByZeroException)
             {
                 Console.WriteLine("Cannot divide by zero");
+                result.Add(0);
             }
             catch (ArgumentOutOfRangeException)
             {
                 Console.WriteLine("Out of range");
+                return result;
             }
         }
         
