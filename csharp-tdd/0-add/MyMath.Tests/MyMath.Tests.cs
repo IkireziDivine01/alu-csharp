@@ -1,53 +1,102 @@
 using NUnit.Framework;
 using MyMath;
 
-
-
-namespace Tests{
-
-
+namespace MyMath.Tests
+{
+    /// <summary>
+    /// Test class for MyMath.Operations
+    /// </summary>
     [TestFixture]
-    public class Test_NumberAddition
+    public class MyMathTests
     {
-        private Operations _myMath;
-
-        [SetUp]
-        public void Setup()
-        {
-            _myMath = new Operations();
-        }
-
         /// <summary>
-        /// Test if addition of two numbers is 4
+        /// Test adding two positive numbers
         /// </summary>
         [Test]
-        public void AdditionOperation()
+        public void Add_TwoPositiveNumbers_ReturnsSum()
         {
-            bool state = false;
-          if((Operations.Add(2, 2)) == 4){
-            state = true;
-          }
-            Assert.IsTrue(state, "State is True");
-            
+            // Arrange
+            int a = 5;
+            int b = 3;
+            int expected = 8;
+
+            // Act
+            int result = Operations.Add(a, b);
+
+            // Assert
+            Assert.AreEqual(expected, result);
         }
 
         /// <summary>
-        /// Test case with argument passsing. 
+        /// Test adding positive and negative numbers
         /// </summary>
-        /// <param name="value"></param>
-        //[TestCase(7)]
-        ///[TestCase(7)]
-        //[TestCase(7)]
-        
-        /*
-        public void TestMultiInput(int value){
-            bool state = false;
-            if((Operations.Add(2, 5)) == value){
-                state = true;
-            }
-            Assert.IsTrue(state, "state is True");
-        }
-        */
+        [Test]
+        public void Add_PositiveAndNegative_ReturnsCorrectSum()
+        {
+            // Arrange
+            int a = 10;
+            int b = -5;
+            int expected = 5;
 
+            // Act
+            int result = Operations.Add(a, b);
+
+            // Assert
+            Assert.AreEqual(expected, result);
+        }
+
+        /// <summary>
+        /// Test adding two negative numbers
+        /// </summary>
+        [Test]
+        public void Add_TwoNegativeNumbers_ReturnsSum()
+        {
+            // Arrange
+            int a = -3;
+            int b = -7;
+            int expected = -10;
+
+            // Act
+            int result = Operations.Add(a, b);
+
+            // Assert
+            Assert.AreEqual(expected, result);
+        }
+
+        /// <summary>
+        /// Test adding zero to a number
+        /// </summary>
+        [Test]
+        public void Add_NumberAndZero_ReturnsNumber()
+        {
+            // Arrange
+            int a = 42;
+            int b = 0;
+            int expected = 42;
+
+            // Act
+            int result = Operations.Add(a, b);
+
+            // Assert
+            Assert.AreEqual(expected, result);
+        }
+
+        /// <summary>
+        /// Test adding two zeros
+        /// </summary>
+        [Test]
+        public void Add_TwoZeros_ReturnsZero()
+        {
+            // Arrange
+            int a = 0;
+            int b = 0;
+            int expected = 0;
+
+            // Act
+            int result = Operations.Add(a, b);
+
+            // Assert
+            Assert.AreEqual(expected, result);
+        }
     }
 }
