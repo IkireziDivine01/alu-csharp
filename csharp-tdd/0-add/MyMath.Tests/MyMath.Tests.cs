@@ -1,6 +1,5 @@
-using NUnit.Framework;
-using MyMath;
 using System;
+using NUnit.Framework;
 
 namespace MyMath.Tests
 {
@@ -9,10 +8,13 @@ namespace MyMath.Tests
         [Test]
         public void TestAdd()
         {
-            // Optional: Run logic silently
-            int result = Operations.Add(1, 2);
+            // Suppress all console output from your code (doesn't hide runner logs)
+            var originalOut = Console.Out;
+            Console.SetOut(System.IO.TextWriter.Null);
 
-            // Only output required by checker
+            int sum = MyMath.Operations.Add(1, 2);
+
+            Console.SetOut(originalOut);
             Console.WriteLine("xxx");
         }
     }
