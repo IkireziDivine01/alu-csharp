@@ -3,6 +3,8 @@
   <PropertyGroup>
     <TargetFramework>net7.0</TargetFramework>
     <IsPackable>false</IsPackable>
+    <!-- Configure test runner verbosity -->
+    <VSTestVerbosity>quiet</VSTestVerbosity>
   </PropertyGroup>
 
   <ItemGroup>
