@@ -6,9 +6,9 @@ namespace MyMath.Tests
     public class Tests
     {
         [Test]
-        public void Add_TwoPositiveNumbers_ReturnsCorrectSum()
+        public void TestAdd()
         {
-            Assert.That(Operations.Add(2, 3), Is.EqualTo(5));
+            Assert.That(Operations.Add(1, 2), Is.EqualTo(3));
         }
     }
 }
