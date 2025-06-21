@@ -3,8 +3,9 @@
   <PropertyGroup>
     <TargetFramework>net7.0</TargetFramework>
     <IsPackable>false</IsPackable>
-    <!-- Configure test runner verbosity -->
+    <!-- Configure test runner for minimal output -->
     <VSTestVerbosity>quiet</VSTestVerbosity>
+    <VSTestLogger>console;verbosity=minimal</VSTestLogger>
   </PropertyGroup>
 
   <ItemGroup>
