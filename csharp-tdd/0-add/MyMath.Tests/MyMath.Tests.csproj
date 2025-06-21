@@ -5,7 +5,6 @@
     <IsPackable>false</IsPackable>
     <!-- Configure test runner for minimal output -->
     <VSTestVerbosity>quiet</VSTestVerbosity>
-    <VSTestLogger>console;verbosity=minimal</VSTestLogger>
   </PropertyGroup>
 
   <ItemGroup>
