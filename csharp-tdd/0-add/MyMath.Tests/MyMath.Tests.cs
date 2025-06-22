@@ -1,5 +1,6 @@
-using System;
 using NUnit.Framework;
+using MyMath;
+using System;
 
 namespace MyMath.Tests
 {
@@ -8,13 +9,7 @@ namespace MyMath.Tests
         [Test]
         public void TestAdd()
         {
-            // Suppress all console output from your code (doesn't hide runner logs)
-            var originalOut = Console.Out;
-            Console.SetOut(System.IO.TextWriter.Null);
-
-            int sum = MyMath.Operations.Add(1, 2);
-
-            Console.SetOut(originalOut);
+            Assert.That(Operations.Add(1, 2), Is.EqualTo(3));
             Console.WriteLine("xxx");
         }
     }
