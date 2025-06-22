@@ -1,0 +1,6 @@
+C:\Users\LENOVO\Documents\alu-csharp\csharp-tdd\5-camelcase\Text.Tests\obj\Debug\net7.0\Text.Tests.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\LENOVO\Documents\alu-csharp\csharp-tdd\5-camelcase\Text.Tests\obj\Debug\net7.0\Text.Tests.AssemblyInfoInputs.cache
+C:\Users\LENOVO\Documents\alu-csharp\csharp-tdd\5-camelcase\Text.Tests\obj\Debug\net7.0\Text.Tests.AssemblyInfo.cs
+C:\Users\LENOVO\Documents\alu-csharp\csharp-tdd\5-camelcase\Text.Tests\obj\Debug\net7.0\Text.Tests.csproj.CoreCompileInputs.cache
+C:\Users\LENOVO\Documents\alu-csharp\csharp-tdd\5-camelcase\Text.Tests\obj\Debug\net7.0\Text.Tests.csproj.AssemblyReference.cache
+C:\Users\LENOVO\Documents\alu-csharp\csharp-tdd\5-camelcase\Text.Tests\bin\Debug\net7.0\.msCoverageSourceRootsMapping_Text.Tests
