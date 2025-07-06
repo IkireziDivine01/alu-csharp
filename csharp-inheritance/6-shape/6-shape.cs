@@ -38,37 +38,29 @@ public class Rectangle : Shape
     }
     
     /// <summary>
-    /// Calculates and returns the area of the rectangle.
-    /// </summary>
-    /// <returns>The area of the rectangle (width * height).</returns>
-    public override int Area()
-    {
-        return width * height;
-    }
-    
-    /// <summary>
     /// Main method - entry point for the application.
     /// </summary>
     /// <param name="args">Command line arguments</param>
     static void Main(string[] args)
     {
-        // Create a rectangle instance
-        Rectangle rect = new Rectangle();
-        rect.Width = 5;
-        rect.Height = 3;
+        // Test 1: Rectangle with width 3, height 8
+        Rectangle rect1 = new Rectangle();
+        rect1.Width = 3;
+        rect1.Height = 8;
         
-        Console.WriteLine($"Rectangle Width: {rect.Width}");
-        Console.WriteLine($"Rectangle Height: {rect.Height}");
-        Console.WriteLine($"Rectangle Area: {rect.Area()}");
+        Console.WriteLine("Rectangle is a subclass of Shape");
+        Console.WriteLine($"Width: {rect1.Width}");
+        Console.WriteLine($"Height: {rect1.Height}");
         
-        // Test validation
+        // Call the base class Area method which throws NotImplementedException
         try
         {
-            rect.Width = -1; // This should throw an exception
+            int area = base.Area();
+            Console.WriteLine($"Area: {area}");
         }
-        catch (ArgumentException ex)
+        catch (NotImplementedException ex)
         {
-            Console.WriteLine($"Error: {ex.Message}");
+            Console.WriteLine(ex.Message);
         }
     }
 }
