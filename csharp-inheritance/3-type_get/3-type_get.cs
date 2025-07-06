@@ -1,6 +1,6 @@
-﻿using System;
+﻿#nullable disable
+using System;
 using System.Reflection;
-
 /// <summary>
 /// Provides utility methods for inspecting objects using reflection.
 /// </summary>
