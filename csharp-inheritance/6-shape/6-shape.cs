@@ -52,10 +52,10 @@ public class Rectangle : Shape
         Console.WriteLine($"Width: {rect1.Width}");
         Console.WriteLine($"Height: {rect1.Height}");
         
-        // Call the base class Area method which throws NotImplementedException
+        // Call the base class Area method through the instance
         try
         {
-            int area = base.Area();
+            int area = rect1.Area();
             Console.WriteLine($"Area: {area}");
         }
         catch (NotImplementedException ex)
