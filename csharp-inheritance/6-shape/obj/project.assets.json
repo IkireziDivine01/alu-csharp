@@ -1,11 +1,30 @@
 {
   "version": 3,
   "targets": {
-    "net7.0": {}
+    "net7.0": {
+      "5-shape/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "compile": {
+          "bin/placeholder/5-shape.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/5-shape.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "5-shape/1.0.0": {
+      "type": "project",
+      "path": "../5-shape/5-shape.csproj",
+      "msbuildProject": "../5-shape/5-shape.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
-    "net7.0": []
+    "net7.0": [
+      "5-shape >= 1.0.0"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\LENOVO\\.nuget\\packages\\": {}
@@ -31,7 +50,11 @@
       "frameworks": {
         "net7.0": {
           "targetAlias": "net7.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\LENOVO\\Documents\\alu-csharp\\csharp-inheritance\\5-shape\\5-shape.csproj": {
+              "projectPath": "C:\\Users\\LENOVO\\Documents\\alu-csharp\\csharp-inheritance\\5-shape\\5-shape.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

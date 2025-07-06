@@ -1,9 +1,6 @@
 ﻿using System;
 using ShapesLib;
 
-namespace ShapesLib
-{
-
     /// <summary>
     /// Represents a rectangle, inheriting from Shape.
     /// </summary>
@@ -40,4 +37,3 @@ namespace ShapesLib
             }
         }
     }
-}
