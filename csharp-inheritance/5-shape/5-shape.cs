@@ -1,9 +1,10 @@
-﻿using System;
-
-public class Shape
+﻿namespace ShapesLib
 {
-    public virtual int Area()
+    public class Shape
     {
-        throw new NotImplementedException("Area() is not implemented");
+        public virtual int Area()
+        {
+            throw new NotImplementedException("Area() is not implemented");
+        }
     }
 }

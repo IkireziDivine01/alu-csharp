@@ -1,38 +1,43 @@
 ﻿using System;
+using ShapesLib;
 
-/// <summary>
-/// Represents a rectangle, inheriting from Shape.
-/// </summary>
-public class Rectangle : Shape
+namespace ShapesLib
 {
-    private int width;
-    private int height;
 
     /// <summary>
-    /// Gets or sets the width of the rectangle.
+    /// Represents a rectangle, inheriting from Shape.
     /// </summary>
-    public int Width
+    public class Rectangle : Shape
     {
-        get { return width; }
-        set
+        private int width;
+        private int height;
+
+        /// <summary>
+        /// Gets or sets the width of the rectangle.
+        /// </summary>
+        public int Width
         {
-            if (value < 0)
-                throw new ArgumentException("Width must be greater than or equal to 0");
-            width = value;
+            get { return width; }
+            set
+            {
+                if (value < 0)
+                    throw new ArgumentException("Width must be greater than or equal to 0");
+                width = value;
+            }
         }
-    }
 
-    /// <summary>
-    /// Gets or sets the height of the rectangle.
-    /// </summary>
-    public int Height
-    {
-        get { return height; }
-        set
+        /// <summary>
+        /// Gets or sets the height of the rectangle.
+        /// </summary>
+        public int Height
         {
-            if (value < 0)
-                throw new ArgumentException("Height must be greater than or equal to 0");
-            height = value;
+            get { return height; }
+            set
+            {
+                if (value < 0)
+                    throw new ArgumentException("Height must be greater than or equal to 0");
+                height = value;
+            }
         }
     }
 }
