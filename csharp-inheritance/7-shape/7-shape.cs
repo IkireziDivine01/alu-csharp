@@ -1,7 +1,22 @@
 ﻿using System;
 
 /// <summary>
-/// Represents a rectangle that inherits from Shape.
+/// Base class Shape
+/// </summary>
+public class Shape
+{
+    /// <summary>
+    /// Virtual method Area() to be overridden
+    /// </summary>
+    /// <returns>Throws NotImplementedException</returns>
+    public virtual int Area()
+    {
+        throw new NotImplementedException("Area() is not implemented");
+    }
+}
+
+/// <summary>
+/// Rectangle class inherits from Shape
 /// </summary>
 public class Rectangle : Shape
 {
@@ -9,7 +24,7 @@ public class Rectangle : Shape
     private int height;
 
     /// <summary>
-    /// Gets or sets the width of the rectangle.
+    /// Gets or sets the width of the rectangle
     /// </summary>
     public int Width
     {
@@ -23,7 +38,7 @@ public class Rectangle : Shape
     }
 
     /// <summary>
-    /// Gets or sets the height of the rectangle.
+    /// Gets or sets the height of the rectangle
     /// </summary>
     public int Height
     {
@@ -37,16 +52,18 @@ public class Rectangle : Shape
     }
 
     /// <summary>
-    /// Calculates and returns the area of the rectangle.
+    /// Overrides the Area method to calculate rectangle area
     /// </summary>
+    /// <returns>Area of the rectangle</returns>
     public new int Area()
     {
         return width * height;
     }
 
     /// <summary>
-    /// Returns a string representation of the rectangle.
+    /// Overrides ToString() to return the rectangle representation
     /// </summary>
+    /// <returns>String representation of Rectangle</returns>
     public override string ToString()
     {
         return $"[Rectangle] {width} / {height}";
