@@ -15,13 +15,15 @@ public class Obj
         Type type = myObj.GetType();
 
         Console.WriteLine($"{type.Name} Properties:");
-        foreach (PropertyInfo prop in type.GetProperties())
+        PropertyInfo[] properties = type.GetProperties();
+        foreach (PropertyInfo prop in properties)
         {
             Console.WriteLine(prop.Name);
         }
 
         Console.WriteLine($"{type.Name} Methods:");
-        foreach (MethodInfo method in type.GetMethods())
+        MethodInfo[] methods = type.GetMethods();
+        foreach (MethodInfo method in methods)
         {
             Console.WriteLine(method.Name);
         }
