@@ -5,21 +5,17 @@ class Program
 {
     static void Main()
     {
-        // Given sides
         double AB = 64;
         double BC = 121;
 
-        // Calculate AC using Pythagorean Theorem
-        double AC = Math.Sqrt(Math.Pow(AB, 2) + Math.Pow(BC, 2));
+        // Pythagorean Theorem
+        double AC = Math.Sqrt(AB * AB + BC * BC);
 
-        // Format result
-        string result = $"The length of AC is: {AC:F2}";
+        // Round to 2 decimal places
+        string result = Math.Round(AC, 2).ToString("F2");
 
-        // Write to a text file
-        string filePath = "length_of_AC.txt";
+        // Ensure 0-pythagoras is a file, not a directory
+        string filePath = "0-pythagoras";
         File.WriteAllText(filePath, result);
-
-        // Optional: Print to console
-        Console.WriteLine("Result written to file: " + filePath);
     }
 }
