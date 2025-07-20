@@ -17,7 +17,7 @@ class Program
         string result = $"The length of the vector v = (7, -3, -9) is: {magnitude:F2}";
 
         // Write the result to a text file
-        string filePath = "vector3D_length.txt";
+        string filePath = "2-magnitude_3D";
         File.WriteAllText(filePath, result);
 
         // Optional: Print to console

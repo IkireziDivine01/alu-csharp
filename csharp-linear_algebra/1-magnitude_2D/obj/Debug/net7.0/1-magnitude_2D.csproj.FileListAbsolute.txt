@@ -1,0 +1,14 @@
+/Users/divine/Documents/alu-csharp/csharp-linear_algebra/1-magnitude_2D/bin/Debug/net7.0/1-magnitude_2D
+/Users/divine/Documents/alu-csharp/csharp-linear_algebra/1-magnitude_2D/bin/Debug/net7.0/1-magnitude_2D.deps.json
+/Users/divine/Documents/alu-csharp/csharp-linear_algebra/1-magnitude_2D/bin/Debug/net7.0/1-magnitude_2D.runtimeconfig.json
+/Users/divine/Documents/alu-csharp/csharp-linear_algebra/1-magnitude_2D/bin/Debug/net7.0/1-magnitude_2D.dll
+/Users/divine/Documents/alu-csharp/csharp-linear_algebra/1-magnitude_2D/bin/Debug/net7.0/1-magnitude_2D.pdb
+/Users/divine/Documents/alu-csharp/csharp-linear_algebra/1-magnitude_2D/obj/Debug/net7.0/1-magnitude_2D.GeneratedMSBuildEditorConfig.editorconfig
+/Users/divine/Documents/alu-csharp/csharp-linear_algebra/1-magnitude_2D/obj/Debug/net7.0/1-magnitude_2D.AssemblyInfoInputs.cache
+/Users/divine/Documents/alu-csharp/csharp-linear_algebra/1-magnitude_2D/obj/Debug/net7.0/1-magnitude_2D.AssemblyInfo.cs
+/Users/divine/Documents/alu-csharp/csharp-linear_algebra/1-magnitude_2D/obj/Debug/net7.0/1-magnitude_2D.csproj.CoreCompileInputs.cache
+/Users/divine/Documents/alu-csharp/csharp-linear_algebra/1-magnitude_2D/obj/Debug/net7.0/1-magnitude_2D.dll
+/Users/divine/Documents/alu-csharp/csharp-linear_algebra/1-magnitude_2D/obj/Debug/net7.0/refint/1-magnitude_2D.dll
+/Users/divine/Documents/alu-csharp/csharp-linear_algebra/1-magnitude_2D/obj/Debug/net7.0/1-magnitude_2D.pdb
+/Users/divine/Documents/alu-csharp/csharp-linear_algebra/1-magnitude_2D/obj/Debug/net7.0/1-magnitude_2D.genruntimeconfig.cache
+/Users/divine/Documents/alu-csharp/csharp-linear_algebra/1-magnitude_2D/obj/Debug/net7.0/ref/1-magnitude_2D.dll
