@@ -1,45 +1,36 @@
 ﻿using System;
 
-
-class MatrixMath
+public class MatrixMath
 {
     public static double[,] Rotate2D(double[,] matrix, double angle)
     {
-        double[,] rotationMatrix = 
+        // Check for 2x2 matrix
+        if (matrix.GetLength(0) != 2 || matrix.GetLength(1) != 2)
+            return new double[,] { { -1 } };
+
+        // Create rotation matrix
+        double cos = Math.Cos(angle);
+        double sin = Math.Sin(angle);
+
+        double[,] rotationMatrix = new double[,]
         {
-            { Math.Cos(angle), Math.Sin(angle)},
-            { -(Math.Sin(angle)), Math.Cos(angle)}
+            { cos, -sin },
+            { sin,  cos }
         };
 
-        int rows = matrix.GetLength(0);
-        int cols = matrix.GetLength(1);
+        // Multiply input matrix by rotation matrix
+        double[,] result = new double[2, 2];
 
-        if(rows == cols && rows == 2 && cols == 2)
+        for (int row = 0; row < 2; row++)
         {
-         
-         double[,] result = new double[rows,rows];
-
-         for (int col = 0; col < cols; col++)
+            for (int col = 0; col < 2; col++)
             {
-                for (int row = 0; row < rows; row++)
-                {
-                    result[row, col] = 0;
-                    for (int k = 0; k < rows; k++)
-                    {
-                        result[row, col] += Math.Round( rotationMatrix[row, k] * matrix[k, col] , 2);
-                    }
-                }
+                result[row, col] =
+                    matrix[row, 0] * rotationMatrix[0, col] +
+                    matrix[row, 1] * rotationMatrix[1, col];
             }
-
-            return result;
         }
 
-        return new double[,]
-        {
-            {
-                -1
-            }
-        };
-       
-    } 
+        return result;
+    }
 }
