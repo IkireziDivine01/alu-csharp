@@ -1,14 +1,15 @@
-﻿public class MatrixMath
+﻿using System;
+
+public class MatrixMath
 {
     public static double[,] Rotate2D(double[,] matrix, double angle)
     {
         int rows = matrix.GetLength(0);
         int cols = matrix.GetLength(1);
 
+        // Check for invalid matrix shape
         if (cols != 2 || rows < 1)
-        {
             return new double[,] { { -1 } };
-        }
 
         double[,] result = new double[rows, 2];
 
