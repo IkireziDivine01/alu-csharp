@@ -4,27 +4,29 @@ public class MatrixMath
 {
     public static double[,] Rotate2D(double[,] matrix, double angle)
     {
-        // Validate 2x2 matrix
-        if (matrix.GetLength(0) != 2 || matrix.GetLength(1) != 2)
-            return new double[,] { { -1 } };
+        int rows = matrix.GetLength(0);
+        int cols = matrix.GetLength(1);
 
-        // Compute cos and sin of the angle
+        // Matrix must be n x 2 for valid 2D vector rotation
+        if (cols != 2 || rows < 1)
+        {
+            return new double[,] { { -1 } };
+        }
+
+        double[,] result = new double[rows, 2];
+
+        // Precompute cos and sin
         double cos = Math.Cos(angle);
         double sin = Math.Sin(angle);
 
-        double[,] result = new double[2, 2];
-
-        for (int i = 0; i < 2; i++)
+        for (int i = 0; i < rows; i++)
         {
             double x = matrix[i, 0];
             double y = matrix[i, 1];
 
-            double xPrime = x * cos - y * sin;
-            double yPrime = x * sin + y * cos;
-
-            // Round to 2 decimal places using AwayFromZero
-            result[i, 0] = Math.Round(xPrime, 2, MidpointRounding.AwayFromZero);
-            result[i, 1] = Math.Round(yPrime, 2, MidpointRounding.AwayFromZero);
+            // Rotation: [x', y'] = [x*cos - y*sin, x*sin + y*cos]
+            result[i, 0] = Math.Round(x * cos - y * sin, 2);
+            result[i, 1] = Math.Round(x * sin + y * cos, 2);
         }
 
         return result;
